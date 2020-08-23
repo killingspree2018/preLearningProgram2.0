@@ -1,1 +1,0 @@
-mvn war:help --log-file output.txt
