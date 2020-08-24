@@ -31,7 +31,7 @@ public class DateTimeOperations {
 	}
 	
 	
-	public String subtract_format_days_months_years(Date d1,Date d2) {
+	public String subtractinformatdaysmonthsyears(Date d1,Date d2) {
 		d1 = sub(d1,d2);
 		String result = "";
 		if(d1.getdays()>0) {
@@ -46,80 +46,105 @@ public class DateTimeOperations {
 		return result.trim();
 	}
 	
-	public String subtract_days(Date d1,Date d2) {
+	public String subtractindays(Date d1,Date d2) {
 		d1 = sub(d1, d2);
 		double totalDays = d1.getYear()*365.25 + d1.getMonth()*30.355 + d1.getdays();
 		return (int)totalDays + (totalDays == 1 ? DAY_STRING[1] : DAY_STRING[0]);
 	}
 	
+	public static void weeknumber(Date d) {
+		System.out.println(d.weekNumber());
+	}
+	
+	public static void dayofweek(Date d) {
+		System.out.println(d.getDay());
+	}
 	public static void tomorrow(Date d){
 		d.addDays(1);
+		System.out.println(d);
 	}
-	public static void Dayaftertomorrow(Date d){	
+	public static void dayaftertomorrow(Date d){	
 		d.addDays(2);
+		System.out.println(d);
 	}
 	public static void yesterday(Date d) throws Exception
 	{
 		d.subtractDays(1);
+		System.out.println(d);
 	}
-	public static void  Daybeforeyesterday(Date d) throws Exception
+	public static void  daybeforeyesterday(Date d) throws Exception
 	{
 		d.subtractDays(2);
+		System.out.println(d);
 	}
-	public static void lastWeek(Date d) throws Exception
+	public static void lastweek(Date d) throws Exception
 	{
 		d.subtractWeeks(1);
+		System.out.println(d);
 	}
-	public static void nextWeek(Date d) {
+	public static void nextweek(Date d) {
 		d.addWeeks(1);
+		System.out.println(d);
 	}
-	public static void nextMonth(Date d)
+	public static void nextmonth(Date d)
 	{
 		d.addMonths(1);
+		System.out.println(d);
 	}
-	public static void lastMonth(Date d) throws Exception
+	public static void lastmonth(Date d) throws Exception
 	{
 		d.subtractMonths(1);
+		System.out.println(d);
 	}
-	public static void nextYear(Date d)
+	public static void nextyear(Date d)
 	{
 		d.addYears(1);
+		System.out.println(d);
 	}
-	public static void lastYear(Date d) throws Exception
+	public static void lastyear(Date d) throws Exception
 	{
 		d.subtractYears(1);
+		System.out.println(d);
 	}
-	public static void nWeeksAfter(Date d,int n)
+	public static void nweeksafter(Date d,int n)
 	{
 		d.addWeeks(n);
+		System.out.println(d);
 	}
-	public static void nDaysAfter(Date d,int n)
+	public static void ndaysafter(Date d,int n)
 	{
 		d.addDays(n);
+		System.out.println(d);
 	}
-	public static void nmonthsAfter(Date d,int n)
+	public static void nmonthsafter(Date d,int n)
 	{
 		d.addMonths(n);
+		System.out.println(d);
 	}
-	public static void nYearsAfter(Date d,int n)
+	public static void nyearsafter(Date d,int n)
 	{
 		d.addYears(n);
+		System.out.println(d);
 	}
-	public static void nWeeksBefore(Date d,int n) throws Exception
+	public static void nweeksbefore(Date d,int n) throws Exception
 	{
 		d.subtractWeeks(n);
+		System.out.println(d);
 	}
-	public static void nDaysBefore(Date d,int n) throws Exception
+	public static void ndaysbefore(Date d,int n) throws Exception
 	{
 		d.subtractDays(n);
+		System.out.println(d);
 	}
-	public static void nMonthsBefore(Date d,int n) throws Exception
+	public static void nmonthsbefore(Date d,int n) throws Exception
 	{
 		d.subtractMonths(n);
+		System.out.println(d);
 	}
-	public static void nYearsBefore(Date d,int n) throws Exception
+	public static void nyearsbefore(Date d,int n) throws Exception
 	{
 		d.subtractYears(n);
+		System.out.println(d);
 	}
 	
 }
