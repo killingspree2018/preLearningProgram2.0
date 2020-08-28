@@ -8,6 +8,7 @@ public class AverageIncomeRunner {
 		
 		String input = "E:\\pre-learning-program-2\\assignments\\Week 2 Assignments\\week2 Assignment 3\\sample_input.csv";
 	    CsvParser.read(input);
+	    DataManipulation.evaluateOutput();
 	    DataManipulation.writeData();
 	}
 

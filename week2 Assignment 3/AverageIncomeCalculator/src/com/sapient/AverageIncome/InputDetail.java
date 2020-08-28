@@ -19,11 +19,22 @@ public class InputDetail implements Comparable {
 	};
 	public InputDetail(String city, String country, String gender, String currency, Double averageIncome) {
 		super();
-		this.country = country;
+		if(country.equals("")) 
+			this.country = city;
+		else
+			this.country = country;
 		this.city = city;
 		this.gender = gender;
 		this.currency = currency;
 		this.averageIncome = averageIncome/conversion.get(currency);
+	}
+	public InputDetail(String country, String gender, Double averageIncome) {
+		super();
+		this.country = country;
+		this.city = "";
+		this.gender = gender;
+		this.currency = "";
+		this.averageIncome = averageIncome;
 	}
 	public String getCountry() {
 		return country;
