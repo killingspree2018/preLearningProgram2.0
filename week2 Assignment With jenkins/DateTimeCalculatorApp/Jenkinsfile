@@ -4,12 +4,14 @@ pipeline {
         stage('Maven compile'){
             steps{
                 echo 'Project compile stage'
+                bat script:'''cd week2 Assignment With jenkins\DateTimeCalculatorApp'''
                 bat label: 'compilation running',script:'''mvn compile'''
             }
         }
         stage('Unit test'){
             steps{
                 echo 'Project Testing stage'
+                
                 bat label: 'test running', script: '''mvn test'''
             }
         }
