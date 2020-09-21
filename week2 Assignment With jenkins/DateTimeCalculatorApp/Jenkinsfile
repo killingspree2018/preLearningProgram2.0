@@ -4,20 +4,20 @@ pipeline {
         stage('Maven compile'){
             steps{
                 echo 'Project compile stage'
-                bat label: 'compilation running',script:'''mvn -f week2 Assignment With jenkins\DateTimeCalculatorApp compile'''
+                bat label: 'compilation running',script:'''mvn -f week2 Assignment With jenkins/DateTimeCalculatorApp compile'''
             }
         }
         stage('Unit test'){
             steps{
                 echo 'Project Testing stage'
                 
-                bat label: 'test running', script: '''mvn -f week2 Assignment With jenkins\DateTimeCalculatorApp test'''
+                bat label: 'test running', script: '''mvn -f week2 Assignment With jenkins/DateTimeCalculatorApp test'''
             }
         }
         stage('maven package'){
             steps{
                 echo 'Project packaging stage'
-                bat label: 'project packaging', script: '''mvn -f week2 Assignment With jenkins\DateTimeCalculatorApp package'''
+                bat label: 'project packaging', script: '''mvn -f week2 Assignment With jenkins/DateTimeCalculatorApp package'''
             }
         }
     }
